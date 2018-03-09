@@ -8,7 +8,7 @@ if (process.env.JAWDB_URL) {
     host: "localhost",
     user: "root",
     password: "unlockme",
-    database: "burgers_db"
+    database: "burger_db"
   });
 };
 
