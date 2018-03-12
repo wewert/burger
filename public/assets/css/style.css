@@ -1,0 +1,60 @@
+body {
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  font-family: 'Bangers', cursive;
+  background-image: url('/assets/img/burger_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+container {
+  font-size: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: green;
+  text-align: center;
+}
+
+.row {
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: red;
+}
+
+button {
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: yellow;
+  border-radius: 12px;
+  border-color: black;
+  color: black;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.addBurger {
+  margin-left: 45%;
+}
+
+#burgerName {
+  width: 250px;
+  height: 30px;
+  margin-left: 41%;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 55px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  text-align: center;
+}
