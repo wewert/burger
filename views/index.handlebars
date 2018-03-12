@@ -1,10 +1,45 @@
-<h1>Burgers</h1>
+<container>
+    {{!-- <img> here burger image --}}
+    <h2>Eat-Da-Burger!</h2>
+    <!-- <div class="container"><img></div> -->
+</container>
 
-<form class="" action="index.html" method="post">
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-  
-  <button type="submit">Make Burger</button>
-</form>
+<div class="row">
+    <!-- <div class="col-md-3"></div> -->
+    <div class="col-md-3">
+      {{#each burgers}}
+         {{#unless devoured}}
+           <div class="container">{{id}}. {{burger_name}}
+               {{!-- <form action="api/burgers/{{this.id}}" method="PUT" > --}}
+                   <button type="submit">Devour</button>
+                {{!-- </form>  --}}
+
+          </div>
+        {{/unless}}
+      {{/each}}
+    </div>
+
+    <div class="col-md-3">
+        {{#each burgers}}
+        {{#if devoured}}
+        <div class="container">
+            {{burger_name}}
+        </div>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
+
+<div>
+    <div class="row">
+        <div class="col-md-4"></div>
+    <form class="create-burger" action="/api/burgers" method="POST">
+        <div class="form-group col-md-4">
+            <label for="exampleFormControlTextarea1"></label>
+            <input class="form-control" rows="2" id="newburger" name="burger_name"></form>
+            <br>
+            <button type="submit">Add a Burger</button>
+        </div>
+    </input>
+    </div>
+</div>
