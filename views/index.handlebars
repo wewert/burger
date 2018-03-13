@@ -1,11 +1,8 @@
 <container>
-    {{!-- <img> here burger image --}}
     <h2>Welcome to Barf Burger!</h2>
-    <!-- <div class="container"><img></div> -->
 </container>
 
 <div class="row">
-    <!-- <div class="col-md-3"></div> -->
     <div class="col-md-3">
       {{#each burgers}}
          {{#unless devoured}}
@@ -15,9 +12,7 @@
         </form>
 
            <div class="container">{{id}}. {{burger_name}}
-               {{!-- <form action="api/burgers/{{this.id}}" method="PUT" > --}}
                    <button type="submit">Devour</button>
-                {{!-- </form>  --}}
 
           </div>
         {{/unless}}
@@ -36,7 +31,7 @@
 </div>
 
 <div>
-  <h3>Make a burger by filling out the field with the name of your burger...</h3>
+  <h3>Make a burger by filling out the field with the name of your burger</h3>
     <div class="row">
         <div class="col-md-4"></div>
     <form class="create-burger" action="/api/burgers" method="POST">

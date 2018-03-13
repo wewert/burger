@@ -11,6 +11,7 @@ router.get("/", function (req, res) {
     res.render("index", hbsObject);
   });
 });
+
 router.post("/api/burgers", function (req, res) {
   var createdBurger = false;
   burger.insertOne([
@@ -34,4 +35,5 @@ router.put("api/burgers/:id", function(req, res) {
     res.redirect("/");
   });
 });
+
 module.exports = router;
