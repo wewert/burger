@@ -15,12 +15,13 @@ router.get("/", function (req, res) {
 router.post("/api/burgers", function (req, res) {
   var createdBurger = false;
   burger.insertOne([
-    "burger_name", "devoured"
+    "burger_name", "devoured", "date_entered"
   ], [
-    req.body.burger_name, createdBurger
-  ], function () {
-    console.log("You created a burger yah");
-    res.redirect("/");
+    req.body.burger_name, req.body.devoured, req.body.date_entered
+  ], function (results) {
+    // console.log("You created a burger yah");
+    // res.redirect("/");
+    res.json({id: result.insertId});
   });
 });
 
@@ -30,9 +31,14 @@ router.put("api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.updateOne({
-    devoured: true,
-  }, condition, function() {
-    res.redirect("/");
+    devoured: req.body.devoured
+  }, condition, function(result) {
+    if(result.changeRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200);
+    }
+    // res.redirect("/");
   });
 });
 
